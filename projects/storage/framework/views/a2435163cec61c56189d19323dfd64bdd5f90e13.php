@@ -1,0 +1,1 @@
+<?php echo $email_body; ?><?php /**PATH /home/webdesignvrvr-reji/htdocs/reji.webdesignvrvr.com/projects/resources/views/mail/dummyMail.blade.php ENDPATH**/ ?>

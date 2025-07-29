@@ -1,0 +1,68 @@
+
+
+/*============================================Review page css start===========================================*/
+
+.review-main{display: flex; border: 2px dashed #000; border-radius: 10px; padding: 20px 50px; width: 86%; margin-left: auto; align-items: center; margin-bottom: 65px; }
+
+.second-review{margin-right: auto; }
+
+.second-review .review-image img{margin-right: -190px; margin-left: 30px; }
+
+.review-image img{margin-left: -190px; margin-right: 30px; }
+
+.review-head{display: flex; align-items: center; }
+
+.author-name{}
+
+.author-name h5{color: #000; font-size: 21px; }
+
+.author-name ul{padding-left: 0; display: flex; list-style-type: none; margin: 19px 0px; }
+
+.author-name ul li{margin-right: 12px; }
+
+.author-name ul li i{color: #ffc000; font-size: 20px; }
+
+.review-head img{margin-left: 11%;width: 100px;height: 100px;border-radius: 50px;}
+
+
+.testimonial-page-wrap .card figure{position: relative; text-align:center;}
+.testimonial-page-wrap .card figure:before{content: '\f10e';position: absolute;top: -29px;font-weight: 600;font-family: 'Font Awesome 5 Free';width: 45px;height: 45px;background-color: var(--secondary-color);justify-content: center;align-items: center;display: flex;color: var(--white-color);}
+.testimonial-page-wrap .card{
+    background-color: var(--white-color);
+    box-shadow: 0px 0px 10px #ccc;
+    border-radius: 0;
+    border: none;
+}
+.testimonial-page-wrap .card .blockquote-footer{
+    margin-top: 10px;
+    text-align: right;
+    color: var(--secondary-color)!important;
+    font-weight: 600;
+}
+.testimonial-page-wrap .card blockquote p{
+    margin-top: 10px;
+    margin-bottom: 10px;
+    font-size: 14px;
+}
+
+.testimonial-page-wrap .card .blockquote-footer cite{
+  font-weight: 800;
+}
+.testimonial-page-wrap .card img{
+    width: 100px;
+    height: 100px;
+    border-radius: 100%;
+    object-fit:cover;
+}
+.testimonial-page-wrap .col-lg-4{
+    margin-bottom:var(--m30);
+}
+.testimonial-page-wrap .rating {
+    margin-top: var(--m20);
+}
+.testimonial-page-wrap i.fa-solid.fa-star {
+    color: var(--secondary-color);
+    font-size: var(--f10);
+    margin-right: var(--m3);
+}
+/*============================================Review page css end===========================================*/

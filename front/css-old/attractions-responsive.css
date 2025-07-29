@@ -1,0 +1,45 @@
+@media (max-width: 980px){
+	.how-we-value-wrapp img.img-fluid{
+		height: 350px;
+	}
+	section.summary-section {
+    padding-top: 115px;
+}
+}
+
+@media (max-width: 540px){
+	.summary-section .inner-column-content{
+		padding: 20px;
+	}
+	.how-we-value-wrapp img.img-fluid {
+        height: 300px;
+    }
+	.how-we-value-wrapp .atrr{
+		padding: 0;
+	}
+	.how-we-value-wrapp .row {
+		gap: 0px 0;
+	}
+	section.summary-section a{
+		font-size: 24px;
+	}
+	.col-lg-7.col-md-12.col-sm-12.position-relative, .col-lg-5.col-md-12.col-sm-12.position-relative.right-contentss {
+    padding: 0px;
+}
+.summary-section .inner-column .image img{
+	height: 300px;
+}
+section.summary-section {
+    padding-top: 40px;
+}
+}
+@media (max-width: 360px){
+section.summary-section a{
+		font-size: 22px;
+	}
+	.summary-section .inner-column .image img{
+	height: 250px;
+}
+}
+
+

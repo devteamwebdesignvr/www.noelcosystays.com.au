@@ -1,0 +1,1 @@
+<?php echo $email_body; ?><?php /**PATH /home/noelcosystays/htdocs/www.noelcosystays.com.au/projects/resources/views/mail/dummyMail.blade.php ENDPATH**/ ?>

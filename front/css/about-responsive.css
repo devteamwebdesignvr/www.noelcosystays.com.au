@@ -1,0 +1,229 @@
+@media screen and (min-width: 992px) and (max-width: 1199px) {
+    .guests .guest-img {
+        width: 50%;
+    }
+    section.about-us .about-image-sec img {
+    width: 400px;
+}
+}
+
+@media (max-width: 980px) {
+  
+  .abt-right {
+    float: right;
+    width: 100%;
+}
+  
+  section.about-us-home {
+    padding-top: 150px;
+}
+  
+.about-image-sec {
+    width: 100%;
+    float: none;
+    margin-left: 0;
+    margin-bottom: 30px;
+}
+    .container,
+    .container-md,
+    .container-sm {
+        max-width: 720px;
+        padding: 0;
+    }
+
+    .about_wrapper {
+        padding-top: 40px;
+        padding-bottom: 40px;
+    }
+
+    .abt-image {
+        width: 100%;
+        /* float: left; */
+        margin-right: 0;
+        margin-bottom: 10px;
+        position: relative;
+        z-index: 1;
+    }
+
+    .guests .guest-img {
+        width: 50%;
+    }
+
+    section.about-us-home .abt-co-img {
+        width: 100%;
+        margin-bottom: var(--m30);
+        float: none;
+        margin-left: 0px;
+    }
+
+    section.about-us-home .abt-left {
+        min-height: auto;
+    }
+
+    section.about-us-home .row {
+        flex-direction: column-reverse;
+    }
+
+    section.about-us-home .col-5.abt-left {
+        width: 100%;
+    }
+
+    .about_section .about_img {
+        width: 100%;
+        float: none;
+        margin-right: 0;
+        margin-bottom: 20px;
+    }
+
+    .about_section .about_img img {
+        height: 400px;
+    }
+
+    .about_section .about_content {
+        min-height: auto;
+    }
+    section.about-us .about-content-sec {
+    padding-right: 0px;
+}
+section.about-us .about-image-sec .abt-img2 {
+    margin: 0 -30% 0 0;
+}
+section.about-us .about-image-sec .abt-img1 {
+    margin: 0px 0 30px -30%;
+}
+.abt-info{
+    padding-left: 12px;
+    padding-right: 12px;
+}
+section.about-us {
+    padding-top: 115px;
+}
+}
+
+@media (max-width: 540px) {
+  
+  section.about-us-home h2 {
+    font-size: var(--f28);
+ 
+}
+      section.about-us-home {
+        padding-top: 40px;
+    }
+  
+    section.about-us .about-image-sec img {
+    width: 100%;
+}
+section.about-us .about-image-sec .abt-img1 {
+    margin: 0px 0 30px 0;
+    width: 100%;
+}
+    section.about-us .about-content-sec {
+    padding-right: 0px;
+}
+section.about-us .about-image-sec .abt-img2 {
+    margin: 0 0 0 0;
+    width: 100%;
+}
+    .img-2 {
+        height: 300px;
+    }
+    .about_wrapper h2 {
+        font-size: 24px;
+    }
+
+    .about_wrapper {
+        padding: 24px;
+    }
+
+    .about-img-0 {
+        width: 100%;
+        margin-right: 0;
+    }
+
+    section.about-us-home .abt-co-img-left {
+        position: relative;
+    }
+
+    section.about-us-home .abt-co-img {
+        padding-right: 0;
+        margin-right: 0;
+        height: auto;
+    }
+
+    section.about-us-home .abt-co-img-right {
+        text-align: left;
+        z-index: 1;
+        transform: translateY(0%) translateX(0px);
+        position: relative;
+        top: 0;
+        margin-top: var(--m20);
+    }
+
+    section.about-us-home .abt-co-img-right img {
+        height: 300px;
+        width: 100%;
+    }
+
+    section.about-us-home .abt-co-img-left img {
+        width: 100%;
+        height: 300px;
+        object-fit: cover;
+    }
+
+    section.about-us-home .col-5.abt-left {
+        padding: 0px;
+    }
+
+    .guests .guest-img {
+        width: 100%;
+        margin-right: 0px;
+        float: none;
+        margin-bottom: 30px;
+    }
+
+    .about_section .about_img img {
+        height: 300px;
+    }
+
+    .about_section .about_content h5 {
+        font-size: var(--f25);
+        margin-bottom: 20px;
+    }
+
+    .about_section .about_content h4 {
+        font-size: var(--f20);
+    }
+
+    .about_section .about_img {
+        border-radius: 0 20%;
+        padding: 0%;
+        border: 20px solid var(--territiary-color);
+    }
+    section.about-us {
+    padding-top: 40px;
+}
+}
+
+@media (max-width: 360px) {
+    section.about-us-home .abt-co-img-right img {
+        height: 250px;
+        width: 100%;
+    }
+
+    .guests img {
+        height: 200px;
+    }
+
+    .about_section .about_img img {
+        height: 250px;
+    }
+
+    .about_section .about_content h5 {
+        font-size: var(--f23);
+        margin-bottom: 20px;
+    }
+
+    .about_section .about_content h4 {
+        font-size: var(--f18);
+    }
+}

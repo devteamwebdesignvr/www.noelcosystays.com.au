@@ -1,0 +1,70 @@
+@media (max-width: 1366px){
+.col-4.payment-side{
+	width: 35%;
+}
+section.payments-details .col-8.payment-map {
+    padding: 0px;
+    width: 65%;
+}
+}
+@media (min-width: 992px) and (max-width: 1199px){
+.payment-bar{
+	padding: var(--p24) var(--p24);
+	}
+	.col-4.payment-side {
+    width: 45%;
+}
+section.payments-details .col-8.payment-map {
+    padding: 0px;
+    width: 55%;
+}
+}
+@media (max-width: 980px){
+    section.payments-details{
+        padding-top: 0px;
+    }
+.col-4.payment-side {
+    width: 100%;
+    padding: 20px 10px;
+}
+header.page-header.mob {
+    position: relative;
+}
+.payment-bar{
+	height: 80vh;
+    overflow-y: scroll;
+	}
+	section.payments-details .col-8.payment-map {
+    padding: 0px;
+    width: 100%;
+}
+section.payments-details .col-8.payment-map iframe{
+	height: 500px;
+}
+}
+@media (max-width: 540px){
+.payment-bar{
+	padding: var(--p24) var(--p15);
+}
+h4 {
+    font-size: 20px;
+}
+.owl-carousel .owl-item img{
+	height: 250px;
+}
+.check-details{
+	flex-direction: column;
+}
+.price-details, .total-amt, .payment-details{
+	margin-top: 20px;
+}
+.payment-details h5 {
+    font-size: 18px;
+    }
+    section.payments-details .col-8.payment-map iframe {
+    height: 350px;
+}
+section.payments-details{
+    padding-top: 0;
+}
+}

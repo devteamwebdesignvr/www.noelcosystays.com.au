@@ -1,0 +1,8 @@
+@media (max-width: 540px){
+.testimonial-page-wrap .col-lg-4{
+    padding:0px;
+}
+.testimonial-page-wrap .card figure{
+     padding:0px !important;
+}
+}

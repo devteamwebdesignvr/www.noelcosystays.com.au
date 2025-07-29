@@ -1,0 +1,40 @@
+$(document).ready(function(){
+  $(".date-left").click(function(){
+    $(".date-box").slideDown();
+  });
+});
+$(document).ready(function(){
+  $(".date-box>.btn-close").click(function(){
+    $(".date-box").slideUp();
+  });
+});
+$(document).ready(function(){
+  $(".guest-left").click(function(){
+    $(".guest-box").slideDown();
+  });
+});
+$(document).ready(function(){
+  $(".guest-box>.btn-close").click(function(){
+    $(".guest-box").slideUp();
+  });
+});
+$(document).ready(function(){
+  $(".box-area").click(function(){
+    $(".card-form").slideDown();
+  });
+});
+
+$(document).ready(function(){
+  $(".cancl").click(function(){
+    $(".guest-box").slideUp();
+     $(".edit-guest").css("visibility","visible");
+  });
+});
+$(document).on("change","#is_coupon",function(){
+        if($(this).prop("checked")==true){
+            $("#coupon-form").show();
+        }else{
+            $("#coupon-form").hide();
+        }
+    });
+

@@ -1,0 +1,10 @@
+section.Blog-details h1{
+	display: none;
+}
+section.Blog-details .container div {
+    width: 100%;
+    min-height: 400px;
+}
+section.Blog-details{
+    /* padding-top: 145px; */
+}

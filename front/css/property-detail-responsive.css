@@ -1,0 +1,383 @@
+@media (max-width: 1400px){
+    .ovabrw_datetime_wrapper{
+        width: 49.2%;
+    }
+    .row.hosted .col-9{
+        width: 100%;
+    }
+}
+@media (max-width: 1366px){
+    .more-properties p.adr{
+        height: 27px;
+    }
+}
+@media (max-width: 1024px) and (min-width: 981px){
+    .ovabrw_datetime_wrapper {
+    position: relative;
+    width: 48.5%;
+}
+.banner h1{
+    text-align: center;
+    padding: 0 var(--p10);
+}
+.ovabrw_datetime_wrapper input, .get-quote select#pet_fee_data_guarav, .get-quote select#heating_pool_fee_data_guarav, input#show-target-data{
+    font-size: 13px;
+}
+#book .side-area{
+    padding: var(--p18);
+}
+#book .price p {
+    font-size: var(--f19);
+}
+#book .side-area a#reset-button-gaurav-data, #book .price {
+    font-size: var(--f15);
+}
+.property-detail .ammenity-home{
+    gap: 10px;
+}
+}
+@media (max-width: 980px){
+    section.property-detail{
+        padding-top: 115px;
+    }
+    .property-detail .row.bottom .col-8, .property-detail .row.bottom .col-4, .property-detail .row.bottom .col-6, .property-detail .row.bottom .col-9, .property-detail .row.bottom .col-3{
+        width:100%;
+    }
+a.sticky.main-btn {
+    display: block;
+}
+#amn .modal-dialog, #rvw .modal-dialog, #house .modal-dialog, #safety .modal-dialog, #cancel .modal-dialog{
+    max-width: 70%;
+    width: 100%;
+}
+div#book {
+    padding-right: 0px;
+    padding-left: 0;
+    padding-bottom: var(--p16);
+}
+.policy .col-lg-4 {
+    padding-left: 0px;
+    width: 33.33%;
+}
+div#gaurav-new-data-area .days-box {
+   width: 200%;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    top: 0px;
+    z-index: 1;
+    height: auto;
+    position: relative;
+}
+div#gaurav-new-data-area .additional-box {
+   width: 200%;
+    bottom: 0px;
+    right: 0;
+    left: 0;
+    top: 0px;
+    z-index: 1;
+    height: auto;
+    position: relative;
+}
+.more-properties .col-4{
+    width: 50%;
+}
+.more-properties .row{
+    gap: 30px 0;
+    justify-content: center;
+}
+.property-detail .ammenity-home{
+   gap: 0;
+    justify-content: space-between;
+}
+.more-properties img.img-fluid{
+    height: 280px;
+}
+.rsDefault .rsGCaption{
+    bottom: 43px;
+}
+}
+@media (max-width: 540px){
+
+section.property-detail{
+        padding-top: 40px;
+    }
+    .property-detail .upper-area h3 {
+    font-size: var(--f20);
+    text-wrap: wrap;
+    display: block;
+    white-space: inherit;
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+    width: 100%;
+}
+.property-detail .ammenity-home span{
+    width: 47%;
+    display: block;
+}
+.property-detail .ammenity-home{
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+.property-detail .adr-area {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    flex-direction: column;
+    margin-top: var(--m10);
+    gap: 10px;
+}
+.property-detail .share-area{
+    margin-left: auto;
+}
+button.main-btn.share, .property-detail .gallery button.main-btn {
+    font-size: var(--f14);
+}
+.property-detail .gallery .col-6 {
+    padding: 0px;
+    width: 100%;
+}
+.property-detail .gallery .col-6.left img {
+    height: 240px;
+    object-fit: cover;
+    margin-bottom: var(--m14);
+    width: 100%;
+    border-radius: 12px 12px 0px 0px;
+}
+.property-detail .gallery .col-6.right img{
+    height: 120px;
+}
+.property-detail .gallery .col-6.right .col-6:nth-child(2) img {
+    border-radius: 0px 0px 0px 0px;
+}
+.property-detail .gallery .col-6.right .col-6:nth-child(3) img {
+    border-radius: 0px 0px 0px 12px;
+}
+.property-detail .upper-area {
+    margin-bottom: var(--m20);
+}
+.property-detail .row.bottom h4 {
+    font-size: var(--f20);
+    text-wrap: wrap;
+    display: block;
+    white-space: inherit;
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+    width: 100%;
+}
+.main-content{
+    padding: 0;
+}
+.col-8{
+    padding: 0;
+}
+.upper-box .price p, .upper-box .price span {
+    font-size: 22px;
+}
+.col.span_6.fwImage{
+    padding: 0 !important;
+}
+#more, #less, #revw, #revl, #revw1, #revl1, #revw2, #revl2, .rul{
+    font-size: var(--f14);
+}
+#amn h5, #rvw h5, #house h5, #safety h5, #cancel h5 {
+    font-size: var(--f17);
+}
+#book .price p {
+    font-size: var(--f20);
+}
+#book .price span, #book .side-area a#reset-button-gaurav-data{
+    font-size: var(--f15);
+}
+div#gaurav-new-data-area .col-md-6, div#gaurav-new-modal-days-area .col-md-6{
+    width:50%;
+    position:relative;
+}
+.property-detail .amenities ul.amenities-detail li {
+    width: 100%;
+}
+.ovabrw_datetime_wrapper {
+    width: 100%;
+}
+div#gaurav-new-data-area .days-box {
+   width: 200%;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    top: 0px;
+    z-index: 1;
+    height: auto;
+    position: relative;
+}
+div#gaurav-new-data-area .additional-box {
+   width: 200%;
+    bottom: 0px;
+    right: 0;
+    left: 0;
+    top: 0px;
+    z-index: 1;
+    height: auto;
+    position: relative;
+}
+div#gaurav-new-data-area .bottom, div#gaurav-new-data-area .inner-area {
+    padding: var(--p20) var(--p15);
+}
+div#gaurav-new-data-area .upper{
+    padding: var(--p16) var(--p15);
+}
+div#gaurav-new-data-area .inner-area{
+    max-height: 200px;
+}
+div#gaurav-new-data-area .days-box h4, div#gaurav-new-data-area .additional-box h4{
+    font-size: var(--f18);
+}
+.reviews .col-lg-6{
+    width: 100%;
+}
+.reviews .row.rev{
+    gap:0;
+}
+#rvw h4, #house h4, #safety h4, #cancel h4 {
+    font-size: var(--f20);
+}
+.guest-profile p{
+    font-size: var(--f15);
+}
+.map iframe{
+    height:380px;
+}
+.policy .col-lg-4 {
+    padding-left: 0px;
+    width: 100%;
+    padding-right: 0px;
+}
+.policy .row{
+    gap:20px;
+}
+a.sticky.main-btn{
+    transform: rotate(0deg);
+    position: fixed;
+    width: 100%;
+    text-align: center;
+    left: 0;
+    right: 0;
+    top: auto;
+    bottom: 0;
+    z-index: 99;
+}
+footer .copyright {
+    padding-bottom: var(--p60);
+}
+input#demo17{
+    height: 100px !important;
+}
+div#book .ovabrw_datetime_wrapper {
+    margin-top: 0 !important;
+}
+.get-quote .main-cal{
+    flex-wrap: wrap;
+}
+.more-properties .col-4{
+    width: 100%;
+    padding: 0px;
+}
+.more-properties .pro-cont{
+    padding: var(--p40) var(--p15) var(--p25) var(--p15);
+}
+.more-properties h5 {
+    font-size: var(--f16);
+}
+.more-properties h5 span{
+    font-size: var(--f20);
+}
+.more-properties h3.title {
+    font-size: var(--f18);
+}
+.more-properties .prop-view-btn a {
+    font-size: var(--f16);
+}
+.more-properties .col-6{
+    width: 100%;
+    padding: 0px;
+}
+.more-properties img.img-fluid {
+        height: 250px;
+    }
+    .more-properties h3.title{
+        height: auto;
+    }
+}
+@media (max-width: 384px){
+    .property-detail .gallery button.main-btn{
+        width: 130px;
+        font-size: var(--f13);
+    }
+    #book .side-area{
+        padding: var(--p20) var(--p14);
+    }
+     div#gaurav-new-data-area .days-box, div#gaurav-new-data-area .additional-box {
+    width: 200%;
+}
+}
+@media (max-width: 375px){
+    div#gaurav-new-data-area .days-box, div#gaurav-new-data-area .additional-box {
+    width: 200%;
+}
+}
+@media (max-width: 360px){
+    button.main-btn.share, .property-detail .gallery button.main-btn {
+    font-size: var(--f13);
+}
+.property-detail .gallery button.main-btn{
+    right: 5px;
+}
+div#gaurav-new-data-area .days-box, div#gaurav-new-data-area .additional-box {
+    width: 200%;
+}
+.map iframe{
+    height:350px;
+}
+#book .price p {
+    font-size: var(--f18);
+}
+.property-detail .row.bottom h4, .property-detail .upper-area h3 {
+    font-size: var(--f18);
+    }
+    section.home-list ul li{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 5px;
+    font-size: var(--f13);
+}
+section.home-list ul li i{
+    margin-right: 0px;
+}
+}
+@media (max-width: 320px){
+    .property-detail .gallery button.main-btn {
+    width: 100px;
+}
+.property-detail .ammenity-home span {
+    font-size: var(--f13);
+}
+#book .price span, #book .side-area a#reset-button-gaurav-data {
+    font-size: var(--f14);
+}
+#book .price p {
+    font-size: var(--f17);
+}
+.ovabrw_datetime_wrapper input, .get-quote select#pet_fee_data_guarav, .get-quote select#heating_pool_fee_data_guarav, input#show-target-data{
+    font-size: 13px;
+}
+div#guestsss{
+    min-width: 220px;
+}
+div#gaurav-new-data-area .days-box, div#gaurav-new-data-area .additional-box {
+    width: 200%;
+}
+form#booking_form p{
+    font-size:13px;
+}
+}

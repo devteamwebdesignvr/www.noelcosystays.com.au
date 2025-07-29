@@ -1,0 +1,42 @@
+.contact-info-box .box-inner a:hover{
+	color: var(--other-color);
+}
+.contact-map{
+	height: 100%;
+}
+section.contact-upper h2, section.contact-upper p{
+	text-align: center;
+}
+section.contact-upper p{
+	margin-bottom: 0;
+}
+.contact-page-section{
+	padding-top: 60px;
+}
+.contact-page-section .contact-details {
+    padding-right: 15%;
+}
+.contact-detail {
+    margin-bottom: 30px;
+}
+.contact-info li a{
+	display: flex;
+    align-items: center;
+    gap: 5px;
+    font-size: 15px;
+}
+.contact-info li a img{
+	width: 20px;
+	margin-right: 6px;
+	height: auto;
+	filter: invert(0.9);
+}
+.contact-info li{
+	margin-bottom: 10px;
+}
+.contact-info li a span{
+	font-weight: bold;
+}
+select option:checked {
+   color:black;
+}

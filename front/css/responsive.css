@@ -1,0 +1,1798 @@
+@media (min-width: 1440px) {
+    .booking_img {
+        left:-22%!important
+    }
+}
+
+@media (min-width: 1600px) {
+    .booking_img {
+        left:-19%!important
+    }
+
+    .breadcrumb {
+        height: 500px
+    }
+
+    .header .nav-item .nav-link {
+        font-size: 18px
+    }
+
+    .attr .slick .slick-center .attr-content,.attr-content {
+        width: 100%
+    }
+}
+
+@media (min-width: 1850px) {
+    .booking_img {
+        left:-17%!important
+    }
+
+    .container,.container-lg,.container-md,.container-sm,.container-xl,.container-xxl {
+        max-width: 1600px!important
+    }
+}
+
+@media (min-width: 2000px) {
+    .container,.container-lg,.container-md,.container-sm,.container-xl,.container-xxl {
+        max-width:1800px!important
+    }
+}
+
+@media (max-width: 1366px) {
+    .navbar-expand-lg .navbar-nav .nav-link {
+        padding-right:.1rem;
+        padding-left: .1rem
+    }
+
+    .header .nav-item {
+        margin: 0 .5rem
+    }
+}
+
+@media screen and (min-width: 992px) and (max-width:1199px) {
+    .booking-area {
+        width:95%
+    }
+
+    .srch-btn .main-btn {
+        padding: 6px 1px;
+        width: 100%;
+        font-size: 15px
+    }
+
+    .header .nav-item .nav-link {
+        font-size: 15px
+    }
+
+    .banner-wrapper {
+        height: auto;
+        position: relative
+    }
+
+    .booking_img {
+        width: 16rem;
+        height: 16rem
+    }
+
+    .booking-right_sec {
+        height: 60vh
+    }
+
+    .left-f .left-amn h2 {
+        font-size: 30px
+    }
+
+    .right-amn-img img {
+        aspect-ratio: 1.3
+    }
+
+    .dot {
+        right: -24px
+    }
+
+    .dot.rght {
+        left: -24px
+    }
+
+    .property-content {
+        padding: 0
+    }
+
+    .property-item-wrap {
+        padding: 15px
+    }
+
+    .memory-image img {
+        left: 0;
+        max-width: 100%
+    }
+
+    .memory-image.imglt img {
+        left: 0;
+        width: 100%
+    }
+
+    .property .property-content {
+        padding: 20px
+    }
+
+    .upper-box h3 {
+        font-size: 22px
+    }
+
+    .comments .contact-form {
+        padding: 21px
+    }
+}
+
+@media (max-width: 1024px) {
+    .r-price {
+        align-items:flex-start;
+        flex-direction: column
+    }
+
+    .about_wrapper .flex-column-reverse h3 {
+        line-height: 2.3rem
+    }
+
+    .property .container {
+        display: flex;
+        gap: 10px;
+        flex-direction: column
+    }
+
+    .property .main,.property-list-sec .main,section#property .col-lg-8.listing1.property-details,section#property div#book {
+        width: 100%
+    }
+
+    .sidebar.right {
+        width: 100%;
+        z-index: 2
+    }
+
+    section#property {
+        flex-direction: column
+    }
+
+    .upper-box .col-lg-3.col-md-2.col-12.col-sm-12 {
+        padding-left: 0;
+        padding-right: 0
+    }
+
+    .upper-box .price {
+        font-size: 21px
+    }
+
+    .rental_item {
+        margin-bottom: 1rem;
+        display: inline-block;
+        width: 49.75%
+    }
+
+    .h-big span {
+        font-size: 50px
+    }
+
+    .booking-area .col-lg {
+        flex: 1 0 0%;
+        padding: 0 6px
+    }
+
+    .amnt {
+        gap: 4px
+    }
+
+    .booking-area select {
+        padding: 10px 6px;
+        font-size: .7rem;
+        letter-spacing: 0
+    }
+
+    .property-list-sec img,h6.property-name {
+        width: 280px
+    }
+
+    .contact-form .form-group,div#calender_nrj {
+        padding: 0
+    }
+
+    .ovabrw_datetime_wrapper {
+        width: 49.6%
+    }
+
+    .contact-page-section .contact-info-box {
+        margin-bottom: 0;
+        width: 50%;
+        padding-bottom: 20px
+    }
+
+    .contact-info-box:nth-last-child(3) {
+        border-right: 0px solid #cdcdcd
+    }
+
+    .navbar-expand-lg .navbar-nav .nav-link {
+        padding-right: .1rem;
+        padding-left: .1rem
+    }
+
+    .header .nav-item {
+        margin: 0 .2rem
+    }
+
+    li.nav-item.social.btn a.main-btn {
+        width: 125px;
+        font-size: 14px;
+        padding: 7px 10px
+    }
+}
+
+@media screen and (max-width: 991px) {
+    .menu-toggle1 i,i#close-menu1 {
+        cursor:pointer;
+        font-size: 28px;
+        color: var(--text-black)
+    }
+
+    .contact-map,.h-big {
+        margin-top: 30px
+    }
+
+    .col-4.fourth.atr,.col-5.fifth.atr,.col-5.first.atr,.col-7.second.atr,.col-8.seventh.atr {
+        border-right: 0px solid
+    }
+
+    #tag1.menu-bar-in {
+        position: absolute;
+        left: -1px;
+        padding: 0;
+        top: 0;
+        background: #fff;
+        text-align: center;
+        width: 350px;
+        transform: translateX(-38em);
+        height: 100vh;
+        transition: .5s ease-in-out;
+        display: block
+    }
+
+    .mobile-menu-logo img {
+        width: auto;
+        margin-bottom: 2rem
+    }
+
+    #close-menu {
+        right: 2rem;
+        position: absolute
+    }
+
+    .header .nav-item .nav-link {
+        color: var(--text-black);
+        font-size: 17px
+    }
+
+    ul.main-menu-list-in.navbar-nav.menu-navbar-nav.social-icon {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        margin-top: 15px;
+        gap: 20px
+    }
+
+    li.nav-item.social.btn a.main-btn {
+        width: 155px
+    }
+
+    li.nav-item.social i {
+        color: var(--text-black);
+        text-shadow: 0 0 0 #000;
+        font-size: 25px;
+        margin-top: 10px
+    }
+
+    .header {
+        z-index: 99
+    }
+
+    .h-big span {
+        font-size: 40px
+    }
+
+    .h-big {
+        padding-left: 15px;
+        padding-right: 15px
+    }
+
+    .banner-wrapper {
+        height: auto;
+        position: relative
+    }
+
+    .video-content h1 {
+        font-size: 40px;
+        margin-bottom: 0
+    }
+
+    .booking-area .form-control,.booking-area select,input#show-target-data {
+        font-size: .8rem;
+        letter-spacing: .01rem
+    }
+
+    .icns {
+        margin-bottom: 0
+    }
+
+    .booking-area {
+        position: relative;
+        z-index: 1;
+        width: 100%;
+        bottom: -2rem
+    }
+
+    .booking-area .row {
+        flex-wrap: wrap
+    }
+
+    .booking-area .col-lg {
+        flex: auto;
+        padding: 0 6px;
+        width: 50%
+    }
+
+    .booking-area select {
+        padding: 10px 6px
+    }
+
+    .booking-area .form-control {
+        padding: 10px 6px 10px 48px
+    }
+
+    .property-sec {
+        padding: 90px 0 50px;
+        background: #fff
+    }
+
+    #prop-hed,section.attr-sec h3 {
+        font-size: 36px;
+        line-height: 1.3
+    }
+
+    .attraction-sec.home .col-4 {
+        flex: 0 0 auto;
+        width: 100%;
+        padding: 0
+    }
+
+    .attraction-sec.home .row {
+        gap: 30px
+    }
+
+    section.attr-sec h2 {
+        text-shadow: 1px 1px 5px #000;
+        font-size: 30px
+    }
+
+    h6.property-name {
+        width: 170px;
+        height: 17px;
+        overflow: hidden
+    }
+
+    .property-sec .col-lg-4 {
+        width: 49%;
+        margin-bottom: 120px
+    }
+
+    .property-item-wrap {
+        padding: 15px
+    }
+
+    .about_wrapper .col-lg-6:first-child {
+        order: 2;
+        text-align: left!important
+    }
+
+    .about_wrapper .heading_sec h3 {
+        font-size: 24px;
+        text-align: left
+    }
+
+    .about_wrapper .col-lg-7.text-center.text-lg-start,.agency-section .col-lg-6.text-center.text-lg-start {
+        text-align: left!important
+    }
+
+    .agency-section,section,section.property-list-sec {
+        padding: 50px 0
+    }
+
+    .about_wrapper .col-lg-6:last-child {
+        order: 2;
+        margin-top: 40px
+    }
+
+    .property-content {
+        padding: 0
+    }
+
+    .property-content h5 {
+        font-size: 23px;
+        line-height: normal
+    }
+
+    .r-price {
+        align-items: center;
+        flex-direction: row
+    }
+
+    .bookin_box h2 {
+        font-size: 26px
+    }
+
+    .dot,.dot-image,.dot-image-right,.memory-item.trial::after,.memory-item.trial::before,.memory-item::after,.memory-item::before,.property-item-wrap::after,.property-item-wrap::before {
+        display: none
+    }
+
+    .breadcrumb {
+        height: 280px
+    }
+
+    .video-sec,video {
+        height: 450px
+    }
+
+    .about_wrapper .flex-column-reverse h3 {
+        line-height: 2rem
+    }
+
+    .about_wrapper .flex-column-reverse h3 a {
+        line-height: 2rem!important
+    }
+
+    .contact-form,.footer-social ul {
+        width: 100%
+    }
+
+    .contact-sec .container .row .col-lg-8 {
+        order: 2
+    }
+
+    .contact-sec .container .row .col-lg-4 {
+        order: 1
+    }
+
+    .left-sec .property-box,a.sticky.main-btn {
+        display: block
+    }
+
+    .property .left-sec img {
+        width: 100%;
+        border-radius: 5px 5px 0 0;
+        height: auto;
+        aspect-ratio: 1.3
+    }
+
+    .property .image-box {
+        height: auto;
+        margin-bottom: 1rem
+    }
+
+    video {
+        width: 100%
+    }
+
+    .contact-map,.contact-map iframe {
+        height: 550px
+    }
+
+    .video-sec .overlay {
+        width: 100%;
+        height: 550px
+    }
+
+    .agency-section p {
+        padding-right: 0
+    }
+
+    .agency-section .image img {
+        height: 400px;
+        width: 100%;
+        margin-bottom: 30px
+    }
+
+    .agency-section .row {
+        flex-direction: column-reverse
+    }
+
+    a.sticky.main-btn.book1.check {
+        right: -63px;
+        left: auto
+    }
+
+    .rental_item {
+        margin-bottom: 1rem;
+        display: inline-block;
+        width: 100%
+    }
+
+    p.pro-list-price span {
+        font-size: 22px
+    }
+
+    .page-title h1 {
+        font-size: 30px;
+        padding-left: 20px;
+        padding-right: 20px
+    }
+
+    .upper-box h3 {
+        font-size: 23px
+    }
+
+    section.get-quote-sec h2 {
+        font-size: 34px
+    }
+
+    section.get-quote-sec .container {
+        max-width: 720px
+    }
+
+    section.attr-sec {
+        padding: 50px 0;
+        background: #f2f2f2
+    }
+
+    .summary-section .row {
+        margin-bottom: 2rem;
+        flex-direction: column
+    }
+
+    section.summary-section a {
+        font-size: 28px
+    }
+
+    .summary-section .inner-column .image img {
+        width: 100%;
+        display: block;
+        height: 400px;
+        object-fit: cover;
+        box-shadow: 0 0 4px #060606;
+        max-width: 100%;
+        position: relative
+    }
+
+    .summary-section .inner-column-content {
+        min-height: auto
+    }
+
+    .contact-page-section .col-md-6 {
+        flex: 0 0 auto;
+        width: 100%
+    }
+
+    .contact-page-section .contact-info-box {
+        border-right: 0px
+    }
+
+    .contact-page-section {
+        position: relative;
+        padding: 50px 0
+    }
+
+    .about_wrapper .col-lg-5.mb-4.mb-lg-0.ps-lg-4.position-relative.text-center {
+        padding-left: 0!important;
+        padding: 0
+    }
+
+    .about-img1 img {
+        width: 100%;
+        height: 500px;
+        object-fit: cover;
+        position: relative;
+        left: 0;
+        top: 0
+    }
+
+    .about_wrapper {
+        padding-top: 50px;
+        background: #f8f7f1
+    }
+
+    .about-img1 {
+        height: auto
+    }
+
+    .col-5.first.atr {
+        height: 350px;
+        width: 100%
+    }
+
+    .col-5.first.atr .img-area,.col-5.first.atr img {
+        height: 350px
+    }
+
+    .col-7.second.atr {
+        border-bottom: 0 solid;
+        width: 100%
+    }
+
+    .col-7.second.atr .row {
+        flex-direction: row-reverse
+    }
+
+    .testimonial-sec .overlay {
+        padding: 50px 0;
+        position: relative
+    }
+
+    footer {
+        padding: 50px 0 0
+    }
+
+    footer .col-md-4 {
+        width: 50%
+    }
+
+    footer .col-md-4:first-child {
+        width: 100%;
+        text-align: center
+    }
+
+    .pro-list-details h3 {
+        font-size: 25px;
+        max-height: 65px
+    }
+
+    .upper-box .food-list li {
+        width: 30.33%;
+        margin-bottom: 10px
+    }
+
+    .page-title {
+        height: 400px
+    }
+}
+
+@media screen and (min-width: 768px) and (max-width:991px) {
+    .video-content {
+        height:55%
+    }
+
+    .price-wrapper {
+        display: block
+    }
+
+    .amenities_home {
+        width: 77%
+    }
+
+    .price {
+        font-size: 20px
+    }
+
+    .dash {
+        width: 30px
+    }
+
+    .booking_img {
+        width: 15rem;
+        height: 15rem;
+        left: -32%
+    }
+
+    .amenities_home>span {
+        margin: 0 3px
+    }
+
+    .booking-right_sec {
+        height: 48vh
+    }
+
+    .memory-image,.right-img {
+        height: 100%
+    }
+
+    .left-f .left-amn h2 {
+        font-size: 22px
+    }
+
+    .right-amn-img img {
+        aspect-ratio: 0.88
+    }
+
+    .right-img {
+        width: 100%;
+        padding: 0
+    }
+
+    .memory-image img {
+        position: relative;
+        left: 0;
+        max-width: 100%;
+        height: 100%;
+        width: 100%
+    }
+
+    .left-content {
+        width: 100%;
+        position: relative;
+        padding: 0
+    }
+
+    .memory-image.imglt img {
+        left: 0;
+        width: 100%
+    }
+
+    .memory-section .row {
+        margin-bottom: 3rem;
+        display: grid;
+        grid-template-columns: 1fr 1fr
+    }
+
+    .property .main,.sidebar.right {
+        width: 100%
+    }
+}
+
+@media (max-width: 767px) {
+    .left-content,.memory-image img {
+        position:relative;
+        width: 100%
+    }
+
+    .footer_logo,.left_copyright,.right_copyright {
+        text-align: center
+    }
+
+    section.Blog-sec .col-12 {
+        padding: 0
+    }
+
+    .memory-image.imglt img {
+        left: 0;
+        width: 100%;
+        height: 250px
+    }
+
+    .memory-section .row {
+        margin-bottom: 3rem;
+        display: flex;
+        grid-template-columns: 1fr;
+        flex-direction: column
+    }
+
+    .memory-section .row.rev {
+        flex-direction: column-reverse
+    }
+
+    .memory-image img {
+        left: 0;
+        max-width: 100%;
+        height: 250px
+    }
+
+    .availability-cal iframe,.property .main,.property_wrapper .col-md-5.mb-lg-0,.property_wrapper .col-md-7.mb-lg-0,.right-img,.sidebar.right {
+        width: 100%
+    }
+
+    .cont-info-c h2,.contact-form-c,.left-f .left-amn h2 {
+        font-size: 28px
+    }
+
+    .memory-section .row:nth-child(odd) .left-content,.pro-2.property_wrapper .col-md-5.mb-4.mb-lg-0 {
+        order: 2
+    }
+
+    .memory-section .row:nth-child(odd) .right-img,.pro-2.property_wrapper .col-md-7.mb-lg-0 {
+        order: 1
+    }
+
+    h1 {
+        font-size: 1.875rem;
+        line-height: 2.5rem
+    }
+
+    h3 {
+        font-size: 1.75rem;
+        line-height: 2.75rem
+    }
+
+    h5 {
+        font-size: 1.25rem
+    }
+
+    p {
+        font-size: 1rem;
+        line-height: 1.5rem
+    }
+
+    .video-content {
+        height: 55%
+    }
+
+    .property_wrapper {
+        padding: 40px 0
+    }
+
+    .booking_img,section.Blog-details h1 {
+        display: none
+    }
+
+    .booking-right_sec {
+        width: 90%;
+        text-align: center;
+        margin: auto;
+        height: auto;
+        padding: 20px 0
+    }
+
+    .fifth-sec {
+        padding: 50px 0 0
+    }
+
+    .left-f .left-amn {
+        height: auto
+    }
+
+    .amn-grid {
+        grid-template-columns: 1fr;
+        gap: 0
+    }
+
+    .card-cta.cta1 h2 {
+        font-size: 26px
+    }
+
+    .footer_links h4,.left-f .left-amn span {
+        font-size: 20px
+    }
+
+    .left-f {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 1rem
+    }
+
+    .footer_logo {
+        margin-bottom: 0
+    }
+
+    .property .container {
+        display: block;
+        gap: 30px;
+        z-index: 1
+    }
+
+    .upper-box h3 {
+        font-size: 24px;
+        line-height: normal
+    }
+
+    .upper-box .col-lg-3.col-md-2.col-12.col-sm-12 {
+        padding-left: 12px;
+        padding-right: 12px
+    }
+
+    section.Blog-details img {
+        width: 100%;
+        margin-right: 0;
+        height: 300px;
+        object-fit: cover;
+        margin-bottom: 20px
+    }
+
+    section.Blog-details .container {
+        display: flex;
+        flex-direction: column
+    }
+}
+
+@media screen and (max-width: 500px) {
+    .about_wrapper .flex-column-reverse h3,h3 {
+        line-height:2rem
+    }
+
+    .calendar-first,.calendar-second {
+        margin-left: auto!important;
+        margin-right: auto!important
+    }
+
+    .contact-info-box .box-inner p,.left-sec ul li,.properties-amenities ul,li,p {
+        font-size: 15px
+    }
+
+    .memory-item .memory-content h2,section.summary-section a {
+        font-size: 26px
+    }
+
+    .checklist p {
+        padding: 0 0 0 20px
+    }
+
+    .testiSlide .slick-prev {
+        left: 1%
+    }
+
+    .testiSlide .slick-next {
+        right: 1%
+    }
+
+    .card-cta.cta1 {
+        width: 100%;
+        padding: 20px;
+        margin: auto
+    }
+
+    .bg-image-home,.comments .contact-form,.memory-item {
+        padding: 20px
+    }
+
+    .left-f {
+        grid-template-columns: 1fr
+    }
+
+    .left-f .left-amn,.properties-amenities ul li,footer .col-md-4:first-child {
+        margin-bottom: 0
+    }
+
+    .video-sec {
+        background-image: url(../images/mobile-bg.webp);
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center;
+        height: 350px;
+        position: relative
+    }
+
+    .video-content h1 {
+        font-size: 28px;
+        margin-bottom: 0;
+        padding-left: 10px;
+        padding-right: 10px
+    }
+
+    .video-content {
+        height: 70%
+    }
+
+    .booking-area {
+        width: 90%;
+        bottom: 0;
+        margin-top: 40px;
+        margin-bottom: 40px;
+        padding: 20px 15px
+    }
+
+    .amenities_home,.contact-form .form-group button {
+        margin-top: 1rem
+    }
+
+    .booking-area .col-lg {
+        flex: auto;
+        padding: 0;
+        width: 100%
+    }
+
+    .booking-area .icns i {
+        left: .5rem
+    }
+
+    .property_wrapper {
+        padding: 40px 15px
+    }
+
+    .agency-section,.property-sec,.testimonial-sec .container,section,section.property-list-sec {
+        padding: 40px 0
+    }
+
+    .subtitle-wrapper {
+        font-size: 14px;
+        text-align: center;
+        line-height: 1.3;
+        letter-spacing: 1px
+    }
+
+    .pro-sec-right h2 {
+        font-size: 18px;
+        height: 26px
+    }
+
+    .price {
+        font-size: 19px
+    }
+
+    section.attr-sec {
+        padding: 40px 0;
+        background: #f2f2f2
+    }
+
+    #prop-hed,section.attr-sec h3 {
+        font-size: 30px;
+        margin-bottom: 20px;
+        line-height: 1.3
+    }
+
+    section.attr-sec h2 {
+        text-shadow: 1px 1px 5px #000;
+        font-size: 28px
+    }
+
+    .col-5.first.atr,.col-5.first.atr .img-area,.col-5.first.atr img,section.attr-sec .content-overlay,section.attr-sec .eighth .img-area,section.attr-sec .eighth a,section.attr-sec .eighth img,section.attr-sec .fifth .img-area,section.attr-sec .fifth a,section.attr-sec .fifth img,section.attr-sec .seventh .img-area,section.attr-sec .seventh a,section.attr-sec .seventh img,section.attr-sec .sixth .img-area,section.attr-sec .sixth a,section.attr-sec .sixth img,section.attr-sec a,section.attr-sec img {
+        height: 286px
+    }
+
+    .about-img2 img,.breadcrumb,.property_wrapper .property-items a img,.video-sec .overlay,video {
+        height: 300px
+    }
+
+    .property-sec .row {
+        gap: 30px 1.5%;
+        flex-direction: column;
+        padding-left: 0;
+        padding-right: 0
+    }
+
+    .amenities_home,.food-list {
+        justify-content: space-between
+    }
+
+    .property-sec .col-lg-4 {
+        border: 2px solid #fff;
+        box-shadow: 1px 1px 15px #ccc;
+        padding-left: 0;
+        padding-right: 0;
+        border-radius: 10px;
+        width: 100%
+    }
+
+    .rates,a.sticky.main-btn {
+        display: block
+    }
+
+    .amenities_home {
+        width: 100%;
+        border-top: 1px solid #d2d2d2;
+        padding-top: 1rem;
+        border-bottom: 1px solid #d2d2d2;
+        padding-bottom: 1rem
+    }
+
+    .price-wrapper {
+        justify-content: center
+    }
+
+    .header .navbar-brand {
+        width: 50%
+    }
+
+    #tag1.menu-bar-in {
+        width: 70%;
+        height: 100vh
+    }
+
+    .mobile-menu-logo img {
+        width: 80%
+    }
+
+    #close-menu {
+        right: 1rem;
+        top: 1rem
+    }
+
+    h3 {
+        font-size: 28px
+    }
+
+    .memory-section {
+        padding-bottom: 0
+    }
+
+    .contact-form {
+        padding: 0 20px 20px
+    }
+
+    .contct-info .contact-icons i {
+        font-size: 2rem
+    }
+
+    .headings {
+        font-size: 17px
+    }
+
+    .left-sec h2 a {
+        font-size: 24px
+    }
+
+    .breadcrumb .auto-container h2 {
+        font-size: 28px;
+        margin-bottom: 2rem
+    }
+
+    .right-amn-img img {
+        height: auto;
+        aspect-ratio: 1.3
+    }
+
+    .upper-box .price {
+        font-size: 19px;
+        margin-top: 0;
+        text-align: left;
+        height: auto
+    }
+
+    .upper-box .food-list li {
+        font-size: 14px;
+        text-align: left;
+        display: flex;
+        gap: 10px;
+        width: 48%;
+        align-items: center;
+        margin-right: 0
+    }
+
+    .food-list {
+        gap: 10px
+    }
+
+    .food-list li i {
+        margin-right: 0;
+        display: block;
+        text-align: center;
+        margin-bottom: 0;
+        width: 20px;
+        height: 19px
+    }
+
+    .contact-form .form-group {
+        margin-bottom: 3px
+    }
+
+    .about_wrapper .flex-column-reverse h3.heading {
+        line-height: 1.8
+    }
+
+    .about-img1 img {
+        margin-top: 0;
+        width: 100%;
+        height: 350px
+    }
+
+    .about_wrapper .col-lg-7.text-center.text-lg-start {
+        text-align: left!important;
+        padding: 0
+    }
+
+    .about_wrapper .heading_sec h3 {
+        font-size: 22px;
+        text-align: left;
+        margin-bottom: 10px
+    }
+
+    .about_wrapper {
+        padding-bottom: 40px;
+        padding-top: 40px
+    }
+
+    .left-sec ul {
+        gap: .7rem;
+        justify-content: space-between
+    }
+
+    .rsDefault .rsGCaption {
+        bottom: 47px!important
+    }
+
+    section.get-quote-sec h2 {
+        font-size: 28px;
+        text-wrap: wrap;
+        display: block;
+        white-space: inherit;
+        word-wrap: break-word;
+        overflow-wrap: break-word;
+        width: 100%
+    }
+
+    section.get-quote-sec th {
+        font-size: 14px
+    }
+
+    .contact-page-section.lv .sec-title,section.attr .col-12,section.get-quote-sec .row.text-center.mt-4.bttn div {
+        padding: 0
+    }
+
+    .table-box {
+        width: 100%;
+        overflow-x: scroll
+    }
+
+    button#sig-clearBtn,button#sig-submitBtn {
+        margin-top: 10px
+    }
+
+    .property_wrapper .col-md-6 {
+        width: 100%;
+        flex-direction: column
+    }
+
+    .attr .slick .slick-center .attr-content,.pro-img-part,.property_wrapper .property-items,.property_wrapper .property-items.overflow-hidden,.row.text-center.mt-4.bttn button,.row.text-center.mt-4.bttn div,footer .col-md-4,section.Blog-details .container div {
+        width: 100%
+    }
+
+    .property_wrapper .property-items a img.pro {
+        height: 300px!important
+    }
+
+    .property-content h5 {
+        height: auto
+    }
+
+    .attr .slick .item .bg,.contact-map,.contact-map iframe {
+        height: 400px
+    }
+
+    .logo {
+        display: flex;
+        gap: 15px;
+        flex-direction: column;
+        align-items: self-start;
+        margin-top: 20px
+    }
+
+    .left-sec .property-content {
+        padding: 0 0 10px
+    }
+
+    .property .container {
+        display: flex;
+        gap: 30px;
+        z-index: 1;
+        flex-direction: column-reverse
+    }
+
+    .pro-list-dec,.testimonial-sec .slick-track {
+        gap: 0;
+        display: flex
+    }
+
+    .contct-info .contact-icons i {
+        width: 32px
+    }
+
+    .h-big span {
+        font-size: 30px;
+        display: block;
+        line-height: 1.3;
+        margin-top: 0
+    }
+
+    video {
+        width: 100%
+    }
+
+    button#pause,button#play {
+        position: absolute;
+        right: 10px;
+        bottom: 10px;
+        z-index: 9;
+        text-align: center;
+        padding: 0 9px;
+        width: 45px;
+        height: 45px;
+        display: block
+    }
+
+    button#pause {
+        display: none
+    }
+
+    section.attr {
+        padding: 60px 0
+    }
+
+    .testimonial-sec .overlay {
+        padding: 0;
+        position: relative
+    }
+
+    .testimonial-sec h3 {
+        font-size: 26px;
+        line-height: 2.1
+    }
+
+    .testimo-centent {
+        padding: 0 10px;
+        width: 100%;
+        margin: 0 auto 1rem;
+        text-align: center
+    }
+
+    .testimo-centent .slick-arrow {
+        right: 40%
+    }
+
+    .testimo-centent button.slick-prev.slick-arrow {
+        left: 30%
+    }
+
+    footer {
+        padding: 40px 0 0
+    }
+
+    .footer-social ul {
+        margin-top: 0;
+        text-align: center
+    }
+
+    .footer_links h4 {
+        margin-top: 25px;
+        font-size: 20px
+    }
+
+    .footer_links ul li,ul.footer_link.f-nav li a {
+        line-height: 23px
+    }
+
+    input#show-target-data {
+        padding: 10px 10px 10px 38px
+    }
+
+    .page-title h1 {
+        font-size: 25px;
+        line-height: 1.2
+    }
+
+    .upper-box h3 {
+        font-size: 22px
+    }
+
+    .agency-section h3 {
+        font-size: 26px;
+        text-align: left
+    }
+
+    #less,#more {
+        cursor: pointer;
+        text-align: left
+    }
+
+    .agency-section p {
+        padding-right: 0;
+        text-align: left
+    }
+
+    .agency-section .image img {
+        height: 350px;
+        width: 100%;
+        margin-top: 0
+    }
+
+    html {
+        overflow-x: hidden
+    }
+
+    .booking {
+        font-size: 1.2rem
+    }
+
+    .pro-list-left {
+        flex-direction: column
+    }
+
+    .property-list-sec img {
+        width: 100%;
+        height: 300px;
+        object-fit: cover
+    }
+
+    .pro-list-details h3 {
+        font-size: 22px;
+        max-height: 100%;
+        height: auto;
+        margin-bottom: 10px
+    }
+
+    .about-pro-list {
+        padding: 20px 10px
+    }
+
+    .pro-list-dec {
+        justify-content: space-between
+    }
+
+    .rental_item {
+        margin-bottom: 10px;
+        display: inline-block;
+        width: 100%
+    }
+
+    section.property-list-sec .row {
+        flex-direction: column-reverse;
+        gap: 30px
+    }
+
+    a.sticky.main-btn.book1.check {
+        right: -104px;
+        left: auto
+    }
+
+    section.property-list-sec div#ovabrw_booking_form .row {
+        flex-direction: column;
+        gap: 0
+    }
+
+    .about-pro-list p.descr {
+        text-align: left
+    }
+
+    .pro-list-dec p {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 5px
+    }
+
+    .checklist a span,.checklist a.g-transparent-a {
+        font-size: 13px
+    }
+
+    .checklist a.g-transparent-a {
+        padding: 18px 10px
+    }
+
+    .upper-box .col-lg-9 {
+        flex: 0 0 auto;
+        width: 100%
+    }
+
+    .upper-box .col-lg-3 {
+        flex: 0 0 auto;
+        width: 100%;
+        padding: 0
+    }
+
+    h3.heading-2 {
+        font-size: 18px
+    }
+
+    .abouttext h4 {
+        font-size: 16px!important
+    }
+
+    .comment-meta h3 {
+        font-size: 16px
+    }
+
+    section.contact-page-section.lv h3 {
+        font-size: 16px;
+        font-weight: 700
+    }
+
+    .contact-page-section .sec-title h3 {
+        line-height: 2;
+        font-size: 20px;
+        letter-spacing: 0;
+        font-weight: 500;
+        margin-top: 20px
+    }
+
+    .contact-page-section .inner-container {
+        position: relative;
+        padding: 0;
+        box-shadow: 0 0 15px rgb(0 0 0 / 10%)
+    }
+
+    .contact-page-section.lv .contact-form .form-group.col-lg-4.col-md-4.col-sm-12,.contact-page-section.lv .contact-form .form-group.col-lg-4.col-md-4.col-sm-6,.contact-page-section.lv .contact-form .form-group.col-lg-6.col-md-6,.contact-page-section.lv .form-group.col-lg-12.col-md-12.col-sm-12 {
+        width: 100%;
+        padding: 0
+    }
+
+    a.sticky.main-btn.book1.book-now {
+        right: 0;
+    }
+
+    div#book {
+        margin-top: 30px
+    }
+
+    .ovabrw_datetime_wrapper {
+        position: relative;
+        width: 100%;
+        display: inline-block;
+        margin-top: 0
+    }
+
+    .contact-page-section {
+        position: relative;
+        padding: 40px 0
+    }
+
+    .contact-page-section .sec-title {
+        position: relative;
+        z-index: 1;
+        margin-bottom: 0;
+        padding: 10px 20px
+    }
+
+    .contact-map {
+        margin-top: 30px
+    }
+
+    .summary-section .inner-column .image img {
+        width: 100%;
+        display: block;
+        height: 350px;
+        object-fit: cover;
+        box-shadow: 0 0 4px #060606;
+        max-width: 100%;
+        position: relative
+    }
+
+    .row.text-center.mt-4.bttn {
+        justify-content: center;
+        gap: 20px
+    }
+
+    .header .nav-item .nav-link {
+        color: var(--text-black);
+        font-size: 16px
+    }
+
+    div#book .ovabrw_datetime_wrapper {
+        margin-top: 15px
+    }
+
+    div#gaurav-new-data-area .col-md-6,div#gaurav-new-modal-days-area .col-md-6 {
+        text-align: left;
+        width: 50%;
+        padding: 0
+    }
+
+    .col-4.fourth.atr,.col-5.fifth.atr,.col-8.seventh.atr,section.attr-sec .atr {
+        border-right: 0px solid;
+        width: 100%
+    }
+
+    .copyright {
+        padding: 10px 0
+    }
+
+    .testimonial-sec .test-desc {
+        margin-top: 0
+    }
+
+    section.Blog-details img {
+        max-width: 100%
+    }
+
+    .contact-info-box .box-inner {
+        position: relative;
+        padding: 0
+    }
+
+    .page-title {
+        height: 150px
+    }
+
+    .upper-box .food-list {
+        gap: 1rem
+    }
+}
+
+@media screen and (max-width: 384px) {
+    .property_wrapper {
+        padding:15px
+    }
+
+    .property .amenities i {
+        display: block;
+        text-align: center;
+        margin-bottom: .5rem
+    }
+
+    .dash {
+        width: 20px
+    }
+
+    section {
+        padding: 40px 0
+    }
+
+    .footer_links h4 {
+        font-size: 20px
+    }
+
+    .breadcrumb .auto-container h2 {
+        font-size: 28px;
+        margin-bottom: 1rem
+    }
+
+    .summary-section .inner-column .image img {
+        width: 100%;
+        display: block;
+        height: 350px;
+        object-fit: cover;
+        box-shadow: 0 0 4px #060606;
+        max-width: 100%;
+        position: relative
+    }
+
+    .inner-column-content {
+        height: auto
+    }
+
+    section.summary-section a {
+        font-size: 22px
+    }
+
+    .summary-section .row {
+        margin-bottom: 1rem
+    }
+
+    .checklist a.g-transparent-a {
+        padding: 18px 10px;
+        text-align: center;
+        line-height: 1.3;
+        display: flex;
+        align-items: center
+    }
+}
+
+@media screen and (max-width: 361px) {
+    .h-big span {
+        font-size:26px
+    }
+
+    #prop-hed,section.attr-sec h3 {
+        font-size: 27px;
+        margin-bottom: 20px;
+        line-height: 1.3
+    }
+
+    .elementor-counter-title {
+        line-height: 1;
+        font-size: 13px
+    }
+
+    .amnt i {
+        font-size: 16px;
+        color: var(--secondary-color);
+        height: 18px
+    }
+
+    .price {
+        font-size: 17px
+    }
+
+    .checklist a span,.checklist a.g-transparent-a,.subtitle-wrapper {
+        font-size: 13px
+    }
+
+    section.attr-sec h2 {
+        text-shadow: 1px 1px 5px #000;
+        font-size: 25px
+    }
+
+    .testimo-centent h4,section.attr-sec .attr-content h3 {
+        font-size: 18px
+    }
+
+    p.readMore_review {
+        font-size: 14px
+    }
+
+    footer {
+        padding: 30px 0 0
+    }
+
+    .checklist a.g-transparent-a {
+        padding: 18px 10px;
+        text-align: center;
+        line-height: 1.3
+    }
+
+    header.header img {
+        width: 80%
+    }
+
+    .agency-section .image img {
+        height: 300px
+    }
+
+    .agency-section h3 {
+        font-size: 24px
+    }
+
+    .page-title h1 {
+        font-size: 22px;
+        line-height: 1.2
+    }
+
+    p.pro-list-price span {
+        font-size: 19px
+    }
+
+    .about-pro-list p.descr,.contact-form .form-group label,.main-btn span,.pro-list-dec p,.pro-list-details h4,.pro-rates p,div#ovabrw_booking_form label {
+        font-size: 15px
+    }
+
+    .pro-list-details h3 {
+        font-size: 20px
+    }
+
+    .booking {
+        font-size: 1.1rem
+    }
+
+    .ovabrw-book-now button {
+        width: 100%;
+        margin-bottom: 10px
+    }
+
+    a.sticky.main-btn.book1.check {
+        right: -99px
+    }
+
+    section.get-quote-sec h2 {
+        font-size: 25px
+    }
+
+    .contact-page-section .sec-title h3 {
+        line-height: 1.2;
+        font-size: 18px
+    }
+}
+
+@media screen and (max-width: 321px) {
+    .upper-box h3 {
+        font-size:20px
+    }
+
+    #guestsss {
+        min-width: 250px
+    }
+
+    .menu-toggle1 i {
+        font-size: 24px
+    }
+
+    .about-pro-list p.descr,.contact-info-box .box-inner a,.copyright p,.footer_links ul li,.footer_links ul li a,.main-btn span,.pro-list-dec p,.pro-list-details h4,.pro-rates p,div#ovabrw_booking_form label {
+        font-size: 14px
+    }
+
+    .ac-box label,.adult,.adult p,.btnssss label {
+        font-size: 13px
+    }
+
+    .upper-box .food-list li {
+        margin-right: 0;
+        text-align: left;
+        font-size: 14px
+    }
+
+    .adult p {
+        margin-bottom: 0
+    }
+
+    .property-sec .row {
+        padding-left: 0;
+        padding-right: 0
+    }
+
+    .property-sec .pro-sec-right {
+        width: 98%;
+        left: 1%
+    }
+
+    .testimonial-sec .slick-track {
+        display: flex;
+        gap: 0
+    }
+
+    .footer_links h4 {
+        font-size: 18px
+    }
+
+    a.sticky.main-btn.book1.check {
+        right: -95px
+    }
+}
