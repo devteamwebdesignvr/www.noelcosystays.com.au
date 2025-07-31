@@ -7,7 +7,6 @@ use Illuminate\Support\Facades\Log;
 use Symfony\Component\HttpFoundation\Response;
 use Illuminate\Support\Str;
 use App\Models\HostAway\HostAwayBooking;
-use App\Models\HostAway\HostAway2Booking;
 
 
 class WebhookController extends Controller {
@@ -61,7 +60,7 @@ class WebhookController extends Controller {
                     break;
             }
           
-            return response()->json(['message' => 'Webhook received successfully'], Response::HTTP_OK);
+            return response()->json(['message' => 'Webhook received successfully'], 200);
 
         } catch (\Exception $e) {
            Log::channel('hostaway_webhooks')->error('Hostaway Webhook Processing Error', [
@@ -69,116 +68,108 @@ class WebhookController extends Controller {
                 'trace' => $e->getTraceAsString(),
                 'payload' => $payload,
             ]);          
-            return response()->json(['error' => 'Internal server error'], Response::HTTP_INTERNAL_SERVER_ERROR);
+            return response()->json(['error' => 'Internal server error'], 500);
         } 
     }  
     
    public function handleReservationCreate($payload){
-        Log::channel('hostaway_webhooks')->info("Insert Function", $payload);
+         Log::channel('hostaway_webhooks')->info("Insert Function", $payload);
 
-        if (!isset($payload['data'])) return;
+         if (!isset($payload['data'])) return;
 
-        $result = $payload['data'];
-        Log::channel('hostaway_webhooks')->info("POST_VALUE", $result);
+         $result = $payload['data'];
+         Log::channel('hostaway_webhooks')->info("POST_VALUE", $result);
+		     $fillable=["listingMapId","listingName","channelId","source","channelName","reservationId","hostawayReservationId","channelReservationId","externalPropertyId","externalUnitId","assigneeUserId","customerIcalId","customerIcalName","guestAuthHash","guestPortalUrl","guestPortalRevampUrl","isProcessed","isInitial","isManuallyChecked","isInstantBooked","reservationDate","pendingExpireDate","guestName","guestFirstName","guestLastName","guestExternalAccountId","guestZipCode","guestAddress","guestCity","guestCountry","guestEmail","guestPicture","guestRecommendations","guestTrips","guestWork","isGuestIdentityVerified","isGuestVerifiedByEmail","isGuestVerifiedByWorkEmail","isGuestVerifiedByFacebook","originalChannel","isGuestVerifiedByGovernmentId","isGuestVerifiedByPhone","isGuestVerifiedByReviews","numberOfGuests","adults","children","infants","pets","arrivalDate","departureDate","isDatesUnspecified","previousArrivalDate","previousDepartureDate","checkInTime","checkOutTime","nights","phone","totalPrice","remainingBalance","taxAmount","channelCommissionAmount","hostawayCommissionAmount","cleaningFee","securityDepositFee","isPaid","ccName","ccNumber","ccNumberEndingDigits","ccExpirationYear","ccExpirationMonth","cvc","stripeGuestId","stripeMessage","braintreeGuestId","braintreeMessage","currency","status","paymentStatus","cancellationDate","cancelledBy","hostNote","guestNote","doorCode","doorCodeVendor","doorCodeInstruction","comment","confirmationCode","airbnbExpectedPayoutAmount","airbnbListingBasePrice","airbnbListingCancellationHostFee","airbnbListingCancellationPayout","airbnbListingCleaningFee","airbnbListingHostFee","airbnbListingSecurityPrice","airbnbOccupancyTaxAmountPaidToHost","airbnbTotalPaidAmount","airbnbTransientOccupancyTaxPaidAmount","airbnbCancellationPolicy","isStarred","isArchived","isPinned","reservationCouponId","customFieldValues","reservationFees","reservationUnit","insertedOn","updatedOn","latestActivityOn","customerUserId","guestLocale","localeForMessaging","localeForMessagingSource","listingCustomFields","rentalAgreementFileUrl","reservationAgreement","financeField","host_away_id",];
 
-        // Fields that need to be stored as JSON strings
-        $jsonFields = [
-            'financeField',
-            'customFieldValues',
-            'reservationFees',
-            'reservationUnit',
-            'listingCustomFields',
-        ];
+          $jsonFields = [
+                'financeField',
+                'customFieldValues',
+                'reservationFees',
+                'reservationUnit',
+                'listingCustomFields',
+          ];
 
-        foreach ($jsonFields as $field) {
-            if (isset($result[$field]) && is_array($result[$field])) {
-                $result[$field] = json_encode($result[$field]);
-            }
-        }
+          foreach ($jsonFields as $field) {
+              if (isset($result[$field]) && is_array($result[$field])) {
+                  $result[$field] = json_encode($result[$field]);
+              }
+          }
 
-        // Move `id` to `host_away_id` if it exists
-        if (isset($result['id'])) {
-            $result['host_away_id'] = $result['id'];
-            unset($result['id']);
-        }
+          if (isset($result['id'])) {
+              $result['host_away_id'] = $result['id'];
+              unset($result['id']);
+          }
+          $new_array = array_intersect_key($result, array_flip($fillable));
 
-        // Allowed fields in DB
-        $fillable=["listingMapId","listingName","channelId","source","channelName","reservationId","hostawayReservationId","channelReservationId","externalPropertyId","externalUnitId","assigneeUserId","customerIcalId","customerIcalName","guestAuthHash","guestPortalUrl","guestPortalRevampUrl","isProcessed","isInitial","isManuallyChecked","isInstantBooked","reservationDate","pendingExpireDate","guestName","guestFirstName","guestLastName","guestExternalAccountId","guestZipCode","guestAddress","guestCity","guestCountry","guestEmail","guestPicture","guestRecommendations","guestTrips","guestWork","isGuestIdentityVerified","isGuestVerifiedByEmail","isGuestVerifiedByWorkEmail","isGuestVerifiedByFacebook","originalChannel","isGuestVerifiedByGovernmentId","isGuestVerifiedByPhone","isGuestVerifiedByReviews","numberOfGuests","adults","children","infants","pets","arrivalDate","departureDate","isDatesUnspecified","previousArrivalDate","previousDepartureDate","checkInTime","checkOutTime","nights","phone","totalPrice","remainingBalance","taxAmount","channelCommissionAmount","hostawayCommissionAmount","cleaningFee","securityDepositFee","isPaid","ccName","ccNumber","ccNumberEndingDigits","ccExpirationYear","ccExpirationMonth","cvc","stripeGuestId","stripeMessage","braintreeGuestId","braintreeMessage","currency","status","paymentStatus","cancellationDate","cancelledBy","hostNote","guestNote","doorCode","doorCodeVendor","doorCodeInstruction","comment","confirmationCode","airbnbExpectedPayoutAmount","airbnbListingBasePrice","airbnbListingCancellationHostFee","airbnbListingCancellationPayout","airbnbListingCleaningFee","airbnbListingHostFee","airbnbListingSecurityPrice","airbnbOccupancyTaxAmountPaidToHost","airbnbTotalPaidAmount","airbnbTransientOccupancyTaxPaidAmount","airbnbCancellationPolicy","isStarred","isArchived","isPinned","reservationCouponId","customFieldValues","reservationFees","reservationUnit","insertedOn","updatedOn","latestActivityOn","customerUserId","guestLocale","localeForMessaging","localeForMessagingSource","listingCustomFields","rentalAgreementFileUrl","reservationAgreement","financeField","host_away_id",];
-        // Filter allowed keys only
-        $new_array = array_intersect_key($result, array_flip($fillable));
-        Log::channel('hostaway_webhooks')->info("Insert_value", $new_array);
-     
-        foreach ($new_array as $key => $val) {
-            if (is_array($val)) {
-                Log::channel('hostaway_webhooks')->error("Field '{$key}' is still an array!", ['value' => $val]);
-            }
-        }
-
-        try {
-            $existing = HostAwayBooking::where("host_away_id", $new_array['host_away_id'])->first();
-            if ($existing) {
-                $existing->update($new_array);
-            } else {
-                HostAwayBooking::create($new_array);
-            }
-            Log::channel('hostaway_webhooks')->info("INSERT Result", 'OK');
-        } catch (\Exception $e) {
-            Log::channel('hostaway_webhooks')->error("Hostaway Webhook Processing Error insert function", [
-                'error' => $e->getMessage(),
-                'trace' => $e->getTraceAsString()
-            ]);
-        }
+          foreach ($new_array as $key => &$val) {
+              if (is_array($val)) {
+                  Log::info("Auto-encoding field: $key");
+                  $val = json_encode($val);
+              }
+          }
+         unset($val); // clear reference
+         $review=HostAwayBooking::where("hostawayReservationId",$result['hostawayReservationId'])->first();
+         if($review){
+           HostAwayBooking::where("hostawayReservationId",$result['hostawayReservationId'])->update($new_array);
+           Log::channel('hostaway_webhooks')->info("Result", ['message' => "Data Update Function handleReservationCreate"]);
+         }else{
+           HostAwayBooking::create($new_array);
+           Log::channel('hostaway_webhooks')->info("Result", ['message' => "Data Insert Function handleReservationCreate"]);
+         }
+         Log::channel('hostaway_webhooks')->info(" Insert Result", ['message' => "OK"]);
+         return response()->json(['status' => 'success'], 200);
     }
 
      public function handleReservationUpdated($payload){
-        Log::channel('hostaway_webhooks')->info("Update Function", $payload);
+         Log::channel('hostaway_webhooks')->info("Update Function", $payload);
 
-        if (!isset($payload['data'])) return;
+         if (!isset($payload['data'])) return;
 
-        $result = $payload['data'];
-        Log::channel('hostaway_webhooks')->info("POST_VALUE", $result);
+         $result = $payload['data'];
+         Log::channel('hostaway_webhooks')->info("POST_VALUE", $result);
+       
+         $fillable=["listingMapId","listingName","channelId","source","channelName","reservationId","hostawayReservationId","channelReservationId","externalPropertyId","externalUnitId","assigneeUserId","customerIcalId","customerIcalName","guestAuthHash","guestPortalUrl","guestPortalRevampUrl","isProcessed","isInitial","isManuallyChecked","isInstantBooked","reservationDate","pendingExpireDate","guestName","guestFirstName","guestLastName","guestExternalAccountId","guestZipCode","guestAddress","guestCity","guestCountry","guestEmail","guestPicture","guestRecommendations","guestTrips","guestWork","isGuestIdentityVerified","isGuestVerifiedByEmail","isGuestVerifiedByWorkEmail","isGuestVerifiedByFacebook","originalChannel","isGuestVerifiedByGovernmentId","isGuestVerifiedByPhone","isGuestVerifiedByReviews","numberOfGuests","adults","children","infants","pets","arrivalDate","departureDate","isDatesUnspecified","previousArrivalDate","previousDepartureDate","checkInTime","checkOutTime","nights","phone","totalPrice","remainingBalance","taxAmount","channelCommissionAmount","hostawayCommissionAmount","cleaningFee","securityDepositFee","isPaid","ccName","ccNumber","ccNumberEndingDigits","ccExpirationYear","ccExpirationMonth","cvc","stripeGuestId","stripeMessage","braintreeGuestId","braintreeMessage","currency","status","paymentStatus","cancellationDate","cancelledBy","hostNote","guestNote","doorCode","doorCodeVendor","doorCodeInstruction","comment","confirmationCode","airbnbExpectedPayoutAmount","airbnbListingBasePrice","airbnbListingCancellationHostFee","airbnbListingCancellationPayout","airbnbListingCleaningFee","airbnbListingHostFee","airbnbListingSecurityPrice","airbnbOccupancyTaxAmountPaidToHost","airbnbTotalPaidAmount","airbnbTransientOccupancyTaxPaidAmount","airbnbCancellationPolicy","isStarred","isArchived","isPinned","reservationCouponId","customFieldValues","reservationFees","reservationUnit","insertedOn","updatedOn","latestActivityOn","customerUserId","guestLocale","localeForMessaging","localeForMessagingSource","listingCustomFields","rentalAgreementFileUrl","reservationAgreement","financeField","host_away_id",];
+        
+         $jsonFields = [
+                'financeField',
+                'customFieldValues',
+                'reservationFees',
+                'reservationUnit',
+                'listingCustomFields',
+          ];
 
-        // Fields that need to be stored as JSON strings
-        $jsonFields = [
-            'financeField',
-            'customFieldValues',
-            'reservationFees',
-            'reservationUnit',
-            'listingCustomFields',
-        ];
+          foreach ($jsonFields as $field) {
+              if (isset($result[$field]) && is_array($result[$field])) {
+                  $result[$field] = json_encode($result[$field]);
+              }
+          }
 
-        foreach ($jsonFields as $field) {
-            if (isset($result[$field]) && is_array($result[$field])) {
-                $result[$field] = json_encode($result[$field]);
-            }
-        }
+          if (isset($result['id'])) {
+              $result['host_away_id'] = $result['id'];
+              unset($result['id']);
+          }
+          $new_array = array_intersect_key($result, array_flip($fillable));
 
-        // Move `id` to `host_away_id` if it exists
-        if (isset($result['id'])) {
-            $result['host_away_id'] = $result['id'];
-            unset($result['id']);
-        }
-
-        // Allowed fields in DB
-        $fillable=["listingMapId","listingName","channelId","source","channelName","reservationId","hostawayReservationId","channelReservationId","externalPropertyId","externalUnitId","assigneeUserId","customerIcalId","customerIcalName","guestAuthHash","guestPortalUrl","guestPortalRevampUrl","isProcessed","isInitial","isManuallyChecked","isInstantBooked","reservationDate","pendingExpireDate","guestName","guestFirstName","guestLastName","guestExternalAccountId","guestZipCode","guestAddress","guestCity","guestCountry","guestEmail","guestPicture","guestRecommendations","guestTrips","guestWork","isGuestIdentityVerified","isGuestVerifiedByEmail","isGuestVerifiedByWorkEmail","isGuestVerifiedByFacebook","originalChannel","isGuestVerifiedByGovernmentId","isGuestVerifiedByPhone","isGuestVerifiedByReviews","numberOfGuests","adults","children","infants","pets","arrivalDate","departureDate","isDatesUnspecified","previousArrivalDate","previousDepartureDate","checkInTime","checkOutTime","nights","phone","totalPrice","remainingBalance","taxAmount","channelCommissionAmount","hostawayCommissionAmount","cleaningFee","securityDepositFee","isPaid","ccName","ccNumber","ccNumberEndingDigits","ccExpirationYear","ccExpirationMonth","cvc","stripeGuestId","stripeMessage","braintreeGuestId","braintreeMessage","currency","status","paymentStatus","cancellationDate","cancelledBy","hostNote","guestNote","doorCode","doorCodeVendor","doorCodeInstruction","comment","confirmationCode","airbnbExpectedPayoutAmount","airbnbListingBasePrice","airbnbListingCancellationHostFee","airbnbListingCancellationPayout","airbnbListingCleaningFee","airbnbListingHostFee","airbnbListingSecurityPrice","airbnbOccupancyTaxAmountPaidToHost","airbnbTotalPaidAmount","airbnbTransientOccupancyTaxPaidAmount","airbnbCancellationPolicy","isStarred","isArchived","isPinned","reservationCouponId","customFieldValues","reservationFees","reservationUnit","insertedOn","updatedOn","latestActivityOn","customerUserId","guestLocale","localeForMessaging","localeForMessagingSource","listingCustomFields","rentalAgreementFileUrl","reservationAgreement","financeField","host_away_id",];
-        // Filter allowed keys only
-        $new_array = array_intersect_key($result, array_flip($fillable));
-        Log::channel('hostaway_webhooks')->info("Insert_value", $new_array);
-
-        try {
-            $existing = HostAwayBooking::where("host_away_id", $new_array['host_away_id'])->first();
-            if ($existing) {
-                $existing->update($new_array);
-            } else {
-                HostAwayBooking::create($new_array);
-            }
-            Log::channel('hostaway_webhooks')->info("Update Result", 'OK');
-        } catch (\Exception $e) {
-            Log::channel('hostaway_webhooks')->error("Hostaway Webhook Processing Error while update function", [
-                'error' => $e->getMessage(),
-                'trace' => $e->getTraceAsString()
-            ]);
-        }
+          foreach ($new_array as $key => &$val) {
+              if (is_array($val)) {
+                  Log::info("Auto-encoding field: $key");
+                  $val = json_encode($val);
+              }
+          }
+         unset($val); // clear reference
+       
+         Log::channel('hostaway_webhooks')->info("Insert_value", $new_array);
+       
+         $review=HostAwayBooking::where("hostawayReservationId",$result['hostawayReservationId'])->first();
+         if($review){
+           HostAwayBooking::where("hostawayReservationId",$result['hostawayReservationId'])->update($new_array);
+           Log::channel('hostaway_webhooks')->info("Result", ['message' => "Data Update Function handleReservationUpdated"]);
+         }else{
+           HostAwayBooking::create($new_array);
+           Log::channel('hostaway_webhooks')->info("Result", ['message' => "Data Insert Function handleReservationUpdated"]);
+         }
+         Log::channel('hostaway_webhooks')->info(" Update Result", ['message' => "OK"]);
+         return response()->json(['status' => 'success'], 200);
     }
 
   
@@ -212,11 +203,11 @@ class WebhookController extends Controller {
              }
            }
            Log::channel('hostaway_webhooks')->info("Insert_value", $new_array); 
-           $review=HostAway2Booking::where("host_away_id",$result['host_away_id'])->first();
+           $review=HostAwayBooking::where("host_away_id",$result['host_away_id'])->first();
            if($review){
-               HostAway2Booking::where("host_away_id",$result['host_away_id'])->update($new_array);
+               HostAwayBooking::where("host_away_id",$result['host_away_id'])->update($new_array);
            }else{
-               HostAway2Booking::create($new_array);
+               HostAwayBooking::create($new_array);
            }
             Log::channel('hostaway_webhooks')->info("INSERT Result", 'OK'); 
        }
@@ -256,11 +247,11 @@ class WebhookController extends Controller {
                    }
                  }
                  Log::channel('hostaway_webhooks')->info("UPDATE_RESERVATION", $new_array); 
-                 $review=HostAway2Booking::where("host_away_id",$result['host_away_id'])->first();
+                 $review=HostAwayBooking::where("host_away_id",$result['host_away_id'])->first();
                  if($review){
-                     HostAway2Booking::where("host_away_id",$result['host_away_id'])->update($new_array);
+                     HostAwayBooking::where("host_away_id",$result['host_away_id'])->update($new_array);
                  }else{
-                     HostAway2Booking::create($new_array);
+                     HostAwayBooking::create($new_array);
                  }
                  Log::channel('hostaway_webhooks')->info("Update Result", 'OK'); 
              }
@@ -293,64 +284,59 @@ class WebhookController extends Controller {
   
   
    public function test(){
-      $payload = file_get_contents(storage_path('app/hostaway_demo.json'));
-      $data = json_decode($payload, true);
+       $payload = file_get_contents(storage_path('app/hostaway_demo.json'));
+       $data = json_decode($payload, true);
       
-      $result = $data['payload']['data'];
-      dd($result);
-     
-      $jsonFields = [
-        'financeField',
-        'customFieldValues',
-        'reservationFees',
-        'reservationUnit',
-        'listingCustomFields',
-     ];
+       $result = $data['payload']['data'];
+       //dd($result);
+       if(isset($data['payload']['data'])){
+          Log::channel('hostaway_webhooks')->info("test book"); 
+          $fillable=["listingMapId","listingName","channelId","source","channelName","reservationId","hostawayReservationId","channelReservationId","externalPropertyId","externalUnitId","assigneeUserId","customerIcalId","customerIcalName","guestAuthHash","guestPortalUrl","guestPortalRevampUrl","isProcessed","isInitial","isManuallyChecked","isInstantBooked","reservationDate","pendingExpireDate","guestName","guestFirstName","guestLastName","guestExternalAccountId","guestZipCode","guestAddress","guestCity","guestCountry","guestEmail","guestPicture","guestRecommendations","guestTrips","guestWork","isGuestIdentityVerified","isGuestVerifiedByEmail","isGuestVerifiedByWorkEmail","isGuestVerifiedByFacebook","originalChannel","isGuestVerifiedByGovernmentId","isGuestVerifiedByPhone","isGuestVerifiedByReviews","numberOfGuests","adults","children","infants","pets","arrivalDate","departureDate","isDatesUnspecified","previousArrivalDate","previousDepartureDate","checkInTime","checkOutTime","nights","phone","totalPrice","remainingBalance","taxAmount","channelCommissionAmount","hostawayCommissionAmount","cleaningFee","securityDepositFee","isPaid","ccName","ccNumber","ccNumberEndingDigits","ccExpirationYear","ccExpirationMonth","cvc","stripeGuestId","stripeMessage","braintreeGuestId","braintreeMessage","currency","status","paymentStatus","cancellationDate","cancelledBy","hostNote","guestNote","doorCode","doorCodeVendor","doorCodeInstruction","comment","confirmationCode","airbnbExpectedPayoutAmount","airbnbListingBasePrice","airbnbListingCancellationHostFee","airbnbListingCancellationPayout","airbnbListingCleaningFee","airbnbListingHostFee","airbnbListingSecurityPrice","airbnbOccupancyTaxAmountPaidToHost","airbnbTotalPaidAmount","airbnbTransientOccupancyTaxPaidAmount","airbnbCancellationPolicy","isStarred","isArchived","isPinned","reservationCouponId","customFieldValues","reservationFees","reservationUnit","insertedOn","updatedOn","latestActivityOn","customerUserId","guestLocale","localeForMessaging","localeForMessagingSource","listingCustomFields","rentalAgreementFileUrl","reservationAgreement","financeField","host_away_id",];
+          
+          $jsonFields = [
+                'financeField',
+                'customFieldValues',
+                'reservationFees',
+                'reservationUnit',
+                'listingCustomFields',
+          ];
 
-      // Encode arrays
-      foreach ($jsonFields as $field) {
-          if (isset($result[$field]) && is_array($result[$field])) {
-              $result[$field] = json_encode($result[$field]);
+          foreach ($jsonFields as $field) {
+              if (isset($result[$field]) && is_array($result[$field])) {
+                  $result[$field] = json_encode($result[$field]);
+              }
           }
-      }
 
-      // Map ID to host_away_id
-      if (isset($result['id'])) {
-          $result['host_away_id'] = $result['id'];
-          unset($result['id']);
-      }
-
-      // Fillable fields list (copy yours exactly)
-      $fillable=["listingMapId","listingName","channelId","source","channelName","reservationId","hostawayReservationId","channelReservationId","externalPropertyId","externalUnitId","assigneeUserId","customerIcalId","customerIcalName","guestAuthHash","guestPortalUrl","guestPortalRevampUrl","isProcessed","isInitial","isManuallyChecked","isInstantBooked","reservationDate","pendingExpireDate","guestName","guestFirstName","guestLastName","guestExternalAccountId","guestZipCode","guestAddress","guestCity","guestCountry","guestEmail","guestPicture","guestRecommendations","guestTrips","guestWork","isGuestIdentityVerified","isGuestVerifiedByEmail","isGuestVerifiedByWorkEmail","isGuestVerifiedByFacebook","originalChannel","isGuestVerifiedByGovernmentId","isGuestVerifiedByPhone","isGuestVerifiedByReviews","numberOfGuests","adults","children","infants","pets","arrivalDate","departureDate","isDatesUnspecified","previousArrivalDate","previousDepartureDate","checkInTime","checkOutTime","nights","phone","totalPrice","remainingBalance","taxAmount","channelCommissionAmount","hostawayCommissionAmount","cleaningFee","securityDepositFee","isPaid","ccName","ccNumber","ccNumberEndingDigits","ccExpirationYear","ccExpirationMonth","cvc","stripeGuestId","stripeMessage","braintreeGuestId","braintreeMessage","currency","status","paymentStatus","cancellationDate","cancelledBy","hostNote","guestNote","doorCode","doorCodeVendor","doorCodeInstruction","comment","confirmationCode","airbnbExpectedPayoutAmount","airbnbListingBasePrice","airbnbListingCancellationHostFee","airbnbListingCancellationPayout","airbnbListingCleaningFee","airbnbListingHostFee","airbnbListingSecurityPrice","airbnbOccupancyTaxAmountPaidToHost","airbnbTotalPaidAmount","airbnbTransientOccupancyTaxPaidAmount","airbnbCancellationPolicy","isStarred","isArchived","isPinned","reservationCouponId","customFieldValues","reservationFees","reservationUnit","insertedOn","updatedOn","latestActivityOn","customerUserId","guestLocale","localeForMessaging","localeForMessagingSource","listingCustomFields","rentalAgreementFileUrl","reservationAgreement","financeField","host_away_id",];
-       	   
-      // Keep only allowed fields
-      $new_array = array_intersect_key($result, array_flip($fillable));
-
-      // Failsafe: auto-encode any remaining arrays
-      foreach ($new_array as $key => &$val) {
-          if (is_array($val)) {
-              Log::info("Auto-encoding field: $key");
-              $val = json_encode($val);
+          if (isset($result['id'])) {
+              $result['host_away_id'] = $result['id'];
+              unset($result['id']);
           }
-      }
-      unset($val); // clear reference
 
-      // Insert or update
-      try {
-          $existing = HostAway2Booking::where("host_away_id", $new_array['host_away_id'])->first();
-          if ($existing) {
-              $existing->update($new_array);
-          } else {
-              HostAway2Booking::create($new_array);
+          // Keep only allowed fields
+          $new_array = array_intersect_key($result, array_flip($fillable));
+
+          // Failsafe: auto-encode any remaining arrays
+          foreach ($new_array as $key => &$val) {
+              if (is_array($val)) {
+                  Log::info("Auto-encoding field: $key");
+                  $val = json_encode($val);
+              }
           }
-          return response()->json(['status' => 'success']);
-      } catch (\Exception $e) {
-          Log::error("Demo Insert Failed", [
-              'error' => $e->getMessage(),
-              'trace' => $e->getTraceAsString(),
-          ]);
-          return response()->json(['status' => 'error', 'message' => $e->getMessage()]);
-      }
+          unset($val); // clear reference
+
+           Log::channel('hostaway_webhooks')->info("Test Insert_value", ['data' => $new_array]);
+       
+           $review=HostAwayBooking::where("hostawayReservationId", $result['hostawayReservationId'])->first();
+           if($review){
+              HostAwayBooking::where("hostawayReservationId",$result['hostawayReservationId'])->update($new_array);
+              Log::channel('hostaway_webhooks')->info("Result", ['message' => "Test Data Update Function handleReservationUpdated"]);
+           }else{
+              HostAwayBooking::create($new_array);
+              Log::channel('hostaway_webhooks')->info("Result", ['message' => "Test Data Insert Function handleReservationUpdated"]);
+           }
+           Log::channel('hostaway_webhooks')->info("Test Update Result", ['message' => "OK"]);
+           return response()->json(['status' => 'success'], 200);
+       }
    }
    
 }
