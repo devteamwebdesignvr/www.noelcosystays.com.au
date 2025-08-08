@@ -290,7 +290,7 @@ return [
                 ["text"=>"Contact us enquiry","url"=>"admin/contact-us-enquiries","permission"=>"admin",'icon' => 'fas fa-fw fa-envelope'],
                 ["text"=>"Booking enquiry","url"=>"admin/booking-enquiries","permission"=>"admin",'icon' => 'fas fa-fw fa-envelope'],
                 ["text"=>"Payments","url"=>"admin/payments","permission"=>"admin",'icon' => 'fas fa-fw fa-envelope'],
-                ["text"=>"Booking enquiry home","url"=>"admin/booking_enquiry_home","permission"=>"admin",'icon' => 'fas fa-fw fa-envelope'], 
+                //["text"=>"Booking enquiry home","url"=>"admin/booking_enquiry_home","permission"=>"admin",'icon' => 'fas fa-fw fa-envelope'], 
             ]
         ],
          [
