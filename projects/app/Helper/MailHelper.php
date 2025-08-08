@@ -41,7 +41,7 @@ class MailHelper{
                     $message->subject($objDemo->subject);
                 });
             }catch (\Exception $e){
-                dd($e->getMessage());
+                $e->getMessage();
             }
         }
     }
