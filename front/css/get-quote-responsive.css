@@ -60,7 +60,7 @@ section.get-quote .price-area .discount-price-box{
 .form-img {
     gap: 5px;
 }
-        section.get-quote {
+section.get-quote {
     padding-top: 40px;
 }
     .form-floating {
@@ -97,7 +97,7 @@ section.get-quote .card-form{
 }
 section.get-quote .card-form .card-form-head h3 {
     font-size: 19px;
-    }
+}
     section.get-quote .card-form .card-form-head{
         flex-direction: column;
     gap: 15px;
