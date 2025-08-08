@@ -229,24 +229,31 @@ class PageController extends Controller{
         if($validator->fails()){
             return redirect()->back()->withInput()->with("danger",$validator->errors()->first())->withErrors($validator->errors());
         }
-        if(ModelHelper::getDataFromSetting('g_captcha_enabled')):
-            if(ModelHelper::getDataFromSetting('g_captcha_enabled')=="yes"):
-                if(ModelHelper::getDataFromSetting('google_captcha_site_key')!="" && ModelHelper::getDataFromSetting('google_captcha_secret_key')!=""):
-                    if($request->get('g-recaptcha-response')):
-                        $secretKey = ModelHelper::getDataFromSetting('google_captcha_secret_key');
-                        $verifyResponse = file_get_contents('https://www.google.com/recaptcha/api/siteverify?secret='.$secretKey.'&response='.$request->get('g-recaptcha-response'));
-                        $responseData = json_decode($verifyResponse);
-                        if($responseData->success){}else{
-                             return redirect()->back()->withInput()->with("danger","Robot verification failed, please try again.");
-                         }
-                    else:
-                        return redirect()->back()->withInput()->with("danger","Please check on the reCAPTCHA box.");
-                    endif;
-                endif;
-            endif;
-        endif;
-        $data = $request->all();        
-        BookingEnquiryHome::create($request->all());
+        // if(ModelHelper::getDataFromSetting('g_captcha_enabled')):
+        //     if(ModelHelper::getDataFromSetting('g_captcha_enabled')=="yes"):
+        //         if(ModelHelper::getDataFromSetting('google_captcha_site_key')!="" && ModelHelper::getDataFromSetting('google_captcha_secret_key')!=""):
+        //             if($request->get('g-recaptcha-response')):
+        //                 $secretKey = ModelHelper::getDataFromSetting('google_captcha_secret_key');
+        //                 $verifyResponse = file_get_contents('https://www.google.com/recaptcha/api/siteverify?secret='.$secretKey.'&response='.$request->get('g-recaptcha-response'));
+        //                 $responseData = json_decode($verifyResponse);
+        //                 if($responseData->success){}else{
+        //                      return redirect()->back()->withInput()->with("danger","Robot verification failed, please try again.");
+        //                  }
+        //             else:
+        //                 return redirect()->back()->withInput()->with("danger","Please check on the reCAPTCHA box.");
+        //             endif;
+        //         endif;
+        //     endif;
+        // endif;
+        $data = $request->all(); 
+        $property = HostAwayProperty::find($request->property_id)->name;
+        //dd($property);       
+        //BookingEnquiryHome::create($request->all());
+        
+        $mailData=["type"=>"thank_you_for_feedback_user",'username'=>$request->name,"to"=>$request->email];
+        MailHelper::emailSender($mailData);
+        $mailData=["type"=>"home_booking_enquiry",'username'=>$request->name,'useremail'=>$request->email,'usermobile'=>$request->mobile,'property'=>$property, "start_date"=>$request->start_date, "end_date"=>$request->end_date, "guests"=>$request->guests, "how_did_you_hear_about_us"=>$request->how_did_you_hear_about_us, "to"=>ModelHelper::getDataFromSetting('home_booking_enquiry')];
+        MailHelper::emailSender($mailData);
         return redirect()->back()->with("success","Thank you for submitting your query, we will get in touch shortly");
     }
   
