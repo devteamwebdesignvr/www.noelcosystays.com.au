@@ -425,7 +425,14 @@
                         <div class="card-form">
                             <div class="card-form-head">
                                 <h3>Pay with Credit/Debit card</h3>
-                                <img src="{{ asset('front')}}/images/credit-card.svg" alt="" />
+                                <div class="form-img">
+                                    <div class="form-first-img">
+                                        <img src="{{ asset('front')}}/images/secure-checkout.png" alt="" />
+                                        <img src="{{ asset('front')}}/images/secure-ssl.png" alt="" />
+                                        <img src="{{ asset('front')}}/images/ssl-bit.png" alt="" />
+                                    </div>
+                                    <img src="{{ asset('front')}}/images/credit-card.svg" alt="" />
+                                </div>
                             </div>
                             <style> .hide{display:none;}</style>
                             <div class="error hide" >
