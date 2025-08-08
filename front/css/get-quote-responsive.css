@@ -50,6 +50,16 @@ section.get-quote .price-area .discount-price-box{
 }
 }
 @media (max-width: 540px){
+    .form-first-img {
+    gap: 5px;
+}
+.form-first-img img{
+    width: 50px;
+}
+
+.form-img {
+    gap: 5px;
+}
         section.get-quote {
     padding-top: 40px;
 }

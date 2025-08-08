@@ -364,9 +364,20 @@ section.get-quote .card-form{
     border-top: 0px solid #00000026;
     display: block;
 }
-section.get-quote .card-form .card-form-head h3{
-font-size: 22px;
-    margin-bottom: 0px;
+section.get-quote .card-form .card-form-head h3{font-size: 19px;margin-bottom: 0px;}
+.form-first-img {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+.form-first-img img{
+    width: 55px;
+}
+
+.form-img {
+    display: flex;
+    align-items: center;
+    gap: 10px;
 }
 section.get-quote .card-form .card-form-head {
     display: flex;
