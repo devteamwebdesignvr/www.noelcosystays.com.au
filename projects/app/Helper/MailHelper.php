@@ -21,6 +21,13 @@ class MailHelper{
             if(isset($mailData['date_of_request'])){$body = preg_replace("/{date_of_request}/", $mailData['date_of_request'] ,$body);}
             if(isset($mailData['guests'])){$body = preg_replace("/{guests}/", $mailData['guests'] ,$body);}
             if(isset($mailData['budget'])){$body = preg_replace("/{budget}/", $mailData['budget'] ,$body);}
+
+            if(isset($mailData['start_date'])){$body = preg_replace("/{start_date}/", $mailData['start_date'] ,$body);}
+            if(isset($mailData['end_date'])){$body = preg_replace("/{end_date}/", $mailData['end_date'] ,$body);}
+            if(isset($mailData['property'])){$body = preg_replace("/{property}/", $mailData['property'] ,$body);}
+            if(isset($mailData['how_did_you_hear_about_us'])){$body = preg_replace("/{how_did_you_hear_about_us}/", $mailData['how_did_you_hear_about_us'] ,$body);}
+
+
             $data = ['email_body' => $body];
             $objDemo = new \stdClass();
             $objDemo->to = explode(',',$mailData['to']);
@@ -34,7 +41,7 @@ class MailHelper{
                     $message->subject($objDemo->subject);
                 });
             }catch (\Exception $e){
-                $e->getMessage();
+                dd($e->getMessage());
             }
         }
     }
