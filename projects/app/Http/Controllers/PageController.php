@@ -252,7 +252,7 @@ class PageController extends Controller{
         
         $mailData=["type"=>"thank_you_for_feedback_user",'username'=>$request->name,"to"=>$request->email];
         MailHelper::emailSender($mailData);
-        $mailData=["type"=>"home_booking_enquiry",'username'=>$request->name,'useremail'=>$request->email,'usermobile'=>$request->mobile,'property'=>$property, "start_date"=>$request->start_date, "end_date"=>$request->end_date, "guests"=>$request->guests, "how_did_you_hear_about_us"=>$request->how_did_you_hear_about_us, "to"=>ModelHelper::getDataFromSetting('home_booking_enquiry')];
+        $mailData=["type"=>"home_booking_enquiry",'username'=>$request->name,'useremail'=>$request->email,'usermobile'=>$request->mobile,'property'=>$property, "start_date"=>$request->start_date, "end_date"=>$request->end_date, "guests"=>$request->guests, "how_did_you_hear_about_us"=>$request->how_did_you_hear_about_us, "to"=>ModelHelper::getDataFromSetting('contact_us_receiving_mail')];
         MailHelper::emailSender($mailData);
         return redirect()->back()->with("success","Thank you for submitting your query, we will get in touch shortly");
     }
